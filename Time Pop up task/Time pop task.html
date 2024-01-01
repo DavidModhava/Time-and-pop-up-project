@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modal</title>
+  <link href="Time pop task.css" rel="stylesheet">
+  <script defer src="Time pop task.js"></script>
+</head>
+<body>
+    
+
+<body onload=display_ct();> 
+   <div class="bg"><button data-modal-target="#modal" id="bt1">See Time Here</button>
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="title">Time</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+        <span id='ct' ></span>
+        <script type="text/javascript"> 
+            function display_c(){
+            var refresh=1000; // Refresh rate in milli seconds
+            mytime=setTimeout('display_ct()',refresh)
+            }
+            
+            function display_ct() {
+            var x = new Date()
+            document.getElementById('ct').innerHTML = x;
+            display_c();
+             }
+            </script>
+    </div>
+  </div>
+  <div id="overlay"></div> 
+
+
+
+
+  
+</body>
+</html>

@@ -1,0 +1,99 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+  }
+  
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+    background-image: url(clock1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .modal-header {
+    padding: 13px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  
+  .modal-header .title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin: 0px auto;
+    background-image: url(clock1);
+  }
+  
+  .modal-header .close-button {
+    cursor: pointer;
+    border: 1px solid blueviolet;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: red;
+    border-radius: 25%;
+  }
+  
+  .modal-body {
+    padding: 30px 35px;
+    color: blueviolet;
+    background: linear-gradient(90deg,#ff6c00,#00c1ed,greenyellow);
+    font-weight: 600;
+  }
+  
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+#bt1{
+  
+  background: linear-gradient(90deg,aqua,#5adc00,hotpink);
+  margin: 186px 1px 1px 80px;
+  display: inline-block;
+  padding: 11px 27px;
+  border-radius: 1px 35px 35px 1px;
+  /*! border-right-width: inherit; */
+}
+.title{
+  
+  text-align: center;
+}
+.bg{
+  
+  /*! background-color: ; */
+  width: 84%;
+  height: 380px;
+  margin: 90px 1px 1px 94px;
+  background: linear-gradient(90deg,violet,aqua,hotpink);
+  border: 5px groove crimson;
+  box-shadow: 1px 1px 8px 0px black;
+  /*! border-radius: 67%; */
+}
